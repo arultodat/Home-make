@@ -1,0 +1,248 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        a {
+    text-decoration: none;
+    }
+
+
+        nav {            
+             background-color: green;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-right: 20px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        ul li a:hover {
+            color: lightgreen;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+       ul li a::after{
+            content: "";  
+            position: absolute;          
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background-color: wheat;
+            transition: 0.5s linear;
+        }
+        a:hover:after{
+            width: 100%;
+        }
+        
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .checkbtn {
+                display: block;
+                order: 1;
+                margin-right: 20px;
+            }
+
+            ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background-color: green;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s;
+            }
+
+            ul li {
+                margin: 20px 0;
+            }
+
+            ul li a {
+                font-size: 20px;
+            }
+
+            #check:checked~ul {
+                right: 0;
+            }
+        }
+
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('./images/banner.jpeg')center/cover no-repeat fixed;    
+}
+
+.banner {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner p{
+    color: white;
+    
+}
+
+
+.banner-btn{
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 1000px;
+    background-image: linear-gradient(180deg, #f53b57, #e9b949);
+}
+
+.banner-btn:hover{
+    outline: 0.125rem solid #f53b57;
+    outline-offset: 0.25rem;
+}
+.shop
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.shopimg img{    
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+}
+.shoptext{
+   height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    left: 0;    
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;    
+} 
+
+
+.shoptext:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.shoptext h3{
+    font-family: 55px;
+    color: #ffe100;
+    margin-bottom: 15px;
+}
+.footer-list
+{
+    height: 20%;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
+}
+.footer-list img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    
+}
+.footer
+{
+    height: 30px;    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #ff0000;
+    color: white;
+}
+.footer-menu a
+{
+    display: block;
+    padding: 5px;
+} 
+.footer
+{
+    text-align: center;
+}
+.footer-menu a
+{
+    color: black;
+}
+.footer-menu h4{
+    color: red;
+}
+.footer-menu a:hover{
+    color: red;
+}
+        @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s infinite normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+
